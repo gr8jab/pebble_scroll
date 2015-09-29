@@ -66,15 +66,18 @@
   <script>
   function getConfigData() {
     var backgroundColorPicker = document.getElementById('background_color_picker');
+	var foregroundColorPicker = document.getElementById('foreground_color_picker');
     var highContrastCheckbox = document.getElementById('high_contrast_checkbox');
  
     var options = {
       'background_color': backgroundColorPicker.value,
+	  'foreground_color': foregroundColorPicker.value,
       'high_contrast': highContrastCheckbox.checked
     };
 
     // Save for next launch
     localStorage['background_color'] = options['background_color'];
+	localStorage['background_color'] = options['background_color'];
     localStorage['high_contrast'] = options['high_contrast'];
 
     console.log('Got options: ' + JSON.stringify(options));
@@ -104,12 +107,14 @@
 
   (function() {
     var backgroundColorPicker = document.getElementById('background_color_picker');
+	var foregroundColorPicker = document.getElementById('foreground_color_picker');
     var highContrastCheckbox = document.getElementById('high_contrast_checkbox');
 
     // Load any previously saved configuration, if available
     if(localStorage['high_contrast']) {
       highContrastCheckbox.checked = JSON.parse(localStorage['high_contrast']);
       backgroundColorPicker.value = localStorage['background_color'];
+	  foregroundColorPicker.value = localStorage['foreground_color'];
     }
   })();
   </script>
