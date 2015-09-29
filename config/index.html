@@ -45,7 +45,7 @@
     </div>
 
     <div class="item-container">
-      <div class="item-container-header">Text to Scrolld</div>
+      <div class="item-container-header">Text to Scroll</div>
       <div class="item-container-content">
         <label class="item">
           <div class="item-input-wrapper">
@@ -66,7 +66,6 @@
     var backgroundColorPicker = document.getElementById('background_color_picker');
 	var foregroundColorPicker = document.getElementById('foreground_color_picker');
 
- 
     var options = {
       'background_color': backgroundColorPicker.value,
 	  'foreground_color': foregroundColorPicker.value,
@@ -76,7 +75,6 @@
     // Save for next launch
     localStorage['background_color'] = options['background_color'];
 	localStorage['background_color'] = options['background_color'];
-
 
     console.log('Got options: ' + JSON.stringify(options));
     return options;
